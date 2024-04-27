@@ -1,0 +1,126 @@
+/* Base styles */
+body {
+    background-color: #333;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0 25px;
+}
+
+.header {
+    display: flex;
+    justify-content: center; /* Center the content for smaller screens */
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.headerCopy {
+    color: white;
+    text-align: center; /* Default to center for small screens */
+    flex: 1 0 50%; /* Flex grow, flex shrink, flex basis */
+}
+
+.headerCopy > h1 {
+    font-size: 55px;
+}
+
+.headerCopy > h2 {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.headerImage { /* Ensure the image container is centered */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex: 1 0 50%; /* Flex grow, flex shrink, flex basis */
+}
+
+#profileImage {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+}
+
+#sigLogo {
+    width: 50%;
+    height: auto;
+    padding-top: 25px;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+  }
+  
+/* visited link */
+a:visited {
+    color: white;
+}
+  
+/* mouse over link */
+a:hover {
+    color: white;
+}
+  
+/* selected link */
+a:active {
+    color: white;
+}
+
+.socialButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+}
+
+#button {
+    background-color: darkred;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #profileImage, #sigLogo {
+        width: 80%;
+    }
+
+    .headerCopy > h1, .headerCopy > h2, .headerCopy > p {
+        text-align: center;
+    }
+
+    .headerCopy > h1 {
+        font-size: 35px;
+    }
+
+    .socialButtons {
+        justify-content: center;
+    }
+}
+
+/* Media Queries for Desktop Devices */
+@media (min-width: 769px) {
+    .header {
+        justify-content: flex-start; /* Align items to the start (left) */
+    }
+
+    .headerCopy {
+        text-align: left; /* Text alignment to the left for desktop */
+    }
+
+    #sigLogo {
+        margin-left: 0; /* Remove auto margin for left alignment */
+    }
+}
